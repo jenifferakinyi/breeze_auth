@@ -1,44 +1,3 @@
-{{-- <!-- resources/views/deals/index.blade.php -->
-
-@extends('layouts\base')
-
-@section('content')
-    <h1>Deals</h1><br><br>
-
-    @if(session('success'))
-        <div class="alert alert-success">{{ session('success') }}</div>
-    @endif
-
-    <table class="table">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Title</th>
-                <th>Description</th>
-               
-                <th>Action</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach($deals as $deal)
-                <tr>
-                    <td>{{ $deal->id }}</td>
-                    <td>{{ $deal->title }}</td>
-                    <td>{{ $deal->description }}</td>
-                   
-                    <td>
-                        <a href="{{ route('deals.show', $deal->id) }}" class="btn btn-info">View</a>
-                        <a href="{{ route('deals.edit', $deal->id) }}" class="btn btn-primary">Edit</a>
-                    </td>
-                </tr>
-            @endforeach
-        </tbody>
-    </table>
-    <a href="{{ route('deals.create') }}" class="btn btn-success">Create Deal</a>
-@endsection --}}
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -107,7 +66,6 @@
                 <th>ID</th>
                 <th>Title</th>
                 <th>Description</th>
-                <th>OrganizatioN</th>
                
                 <th>Action</th>
             </tr>
@@ -118,7 +76,6 @@
                     <td>{{ $deal->id }}</td>
                     <td>{{ $deal->title }}</td>
                     <td>{{ $deal->description }}</td>
-                    <td>{{ $deal->organization->name}}</td>
                    
                     <td>
                         <a href="{{ route('deals.show', $deal->id) }}" class="btn btn-info">View</a>

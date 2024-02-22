@@ -21,9 +21,6 @@ class DealFactory extends Factory
             //
             'title'=>$this->faker->title,
             'description'=>$this->faker->sentence(30),
-            'organization_id' => function () {
-                return Organization::factory()->create()->id;
-            },
         ];
     }
 }
