@@ -1,7 +1,7 @@
-@extends('layouts.base')
+{{-- {{-- @extends('layouts.base')
 @section('content')
     {{-- use flowbite for the ui --}}
-    <div class="relative overflow-x-auto">
+    {{-- <div class="relative overflow-x-auto">
         <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
             <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                 <tr>
@@ -15,11 +15,11 @@
                         Phone
                     </th>
                     <th scope="col" class="px-6 py-3">
-                        Organization
-                    </th>
+                        Organization --}}
+                    {{-- </th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody> --}}
                 <!-- loop through the contacts and display them -->
                 <!--check if the contacts is not empty -->
                 <!--use the isset() function to check if the contacts variable is not empty -->
@@ -30,32 +30,30 @@
                             No contacts found.
                         </td>
                     </tr>
-                @else
+                {{-- @else
                     @foreach ($contacts as $contact)
                         <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                             <td class="px-6 py-4">
                                 {{--  display contact first_name from the fillables --}}
-                                {{ $contact->first_name }} {{ $contact->last_name }}
+                                {{-- {{ $contact->first_name }} {{ $contact->last_name }}
                             </td>
                             <td class="px-6 py-4">
                                 {{ $contact->email }}
                             </td>
-                            <td class="px-6 py-4">
-                                {{ $contact->phone }}
+                            <td class="px-6 py-4"> --}}
+                                {{-- {{ $contact->phone }}
                             </td>
                             <td class="px-6 py-4">
                                 {{-- contact organization --}}
-                                {{ $contact->organization->name }}
-                            </td>
-                        </tr>
+                                {{-- {{ $contact->organization->name }} --}}
+                            {{-- </td> --}} 
+                        {{-- </tr>
                     @endforeach
                 @endif
             </tbody>
         </table>
     </div>
-@endsection
-
-
+@endsection --}}
 
 
 
@@ -138,18 +136,20 @@
                 <tr>
                     <td>{{ $contact->id }}</td>
                     <td> {{ $contact->first_name }} {{ $contact->last_name }}</td>
-                    <td>{{ $cotact->description }}</td>
+                    <td> {{ $contact->email }}</td>
+                    <td> {{ $contact->phone }}</td>
+                    <td>{{ $contact->organization->name }}</td>
                    
                     <td>
-                        <a href="{{ route('deals.show', $deal->id) }}" class="btn btn-info">View</a>
-                        <a href="{{ route('deals.edit', $deal->id) }}" class="btn btn-primary">Edit</a>
-                        <a href="{{ route('deals.destroy', $deal->id) }}" class="btn btn-danger">Delete</a> 
+                        <a href="{{ route('contact.show', $contact->id) }}" class="btn btn-info">View</a>
+                        <a href="{{ route('contact.edit', $contact->id) }}" class="btn btn-primary">Edit</a>
+                        <a href="{{ route('contact.destroy', $contact->id) }}" class="btn btn-danger">Delete</a> 
                     </td>
                 </tr>
             @endforeach
         </tbody>
     </table><br><br>
-    <a href="{{ route('deals.create') }}" class="btn btn-success">Create Deal</a>
+    <a href="{{ route('contact.create') }}" class="btn btn-success">Create Deal</a>
 @endsection
 </body>
 </html>
