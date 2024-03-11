@@ -1,11 +1,11 @@
-# Apex CRM Application
+#  CRM Application
 
 ![alt text](<Screenshot 2024-02-22 160237-1.png>)
 ![alt text](<Screenshot 2024-02-22 163230.png>)
 
 ## Overview
 
-Apex CRM is a comprehensive Customer Relationship Management (CRM) application built with Laravel. It provides a suite of tools for managing customer interactions, tracking leads, and monitoring sales. The application is designed to streamline business operations and improve customer relationships.
+ CRM is a comprehensive Customer Relationship Management (CRM) application built with Laravel. It provides a suite of tools for managing customer interactions, tracking leads, and monitoring sales. The application is designed to streamline business operations and improve customer relationships.
 
 ## Features
 
