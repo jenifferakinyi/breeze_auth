@@ -15,7 +15,7 @@
 -   Quote Management: Create and manage quotes for potential deals.
 -   Invoice Management: Generate and manage invoices for completed deals.
 -   Activity Tracking: Monitor user activities and tasks.
--   Deal Management: Track the sales process from lead to close.
+-   Deal Management: Track the sales Process from lead to close.
 
 ## Installation
 
